@@ -39,25 +39,21 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+
+% Include comments
+%At the start of the LA T EX source code please include commented material to identify the journal, author, and (if you are sending a revised version or a resubmission) the reference number that the journal has given to the submission. 
+
 \documentclass[12pt]{iopart}
-\newcommand{\gguide}{{\it Preparing graphics for IOP journals}}
+\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
 %Uncomment next line if AMS fonts required
 %\usepackage{iopams}  
+\usepackage{cite}
 \usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{cancel}
-\usepackage{multirow}
-\usepackage{supertabular}
-\usepackage{algorithmic}
-\usepackage{algorithm}
-\usepackage{amsthm}
-\usepackage{float}
-\usepackage{subfig}
-\usepackage{rotating}
-\usepackage{graphicx}
-% \usepackage{natbib}
+
+
 
 \begin{document}
+	
 \title[Silage Maize Yield estimates using Soil Moisture Climate Projections]{Silage Maize Yield estimates using Soil Moisture Climate Projections}
 \author{Michael Peichl, Stephan Thober, Andreas Marx}
 
@@ -65,9 +61,15 @@
 \ead{michael.peichl@ufz.de}
 
 \begin{abstract}
-Here comes the abstract.
+Here comes the abstract. The abstract should normally be restricted to a single paragraph of around 200 words.
+
+
 
 \end{abstract}
+
+\noindent{\it Keywords\/}: silage maize, climate change, Germany (3 - 7 words)
+
+%\keywords{magnetic moment, solar neutrinos, astrophysics}
 
 %Uncomment for PACS numbers title message
 %\pacs{00.00, 20.00, 42.10}
@@ -75,14 +77,14 @@ Here comes the abstract.
 %\vspace{2pc}
 %\noindent{\it Keywords}: Article preparation, IOP journals
 % Uncomment for Submitted to journal title message
-%\submitto{\JPA}
+\submitto{\ERL}
 % Comment out if separate title page not required
 \maketitle
+	
 
 \section{Introduction}
-Should state clearly the object
-of the work, its scope and the main advances reported, with brief references to relevant
-results by other workers \cite{Schlenker2006b}.
+Should state clearly the object of the work, its scope and the main advances reported, with brief references to relevant
+results by other workers   \cite{Brouwer2012, Schlenker2009}.
 
 \section{Data}
 \subsection{Training Data}
@@ -93,13 +95,10 @@ results by other workers \cite{Schlenker2006b}.
 % \ack
 % \appendix 
 
-
-
-\section*{References}
-
-\bibliographystyle{jphysicsB}
-\bibliography{Mendeley}
-
-
+\bibliography{Mendeley}{}
+\bibliographystyle{plain}
+	
 \end{document}
+
+
 

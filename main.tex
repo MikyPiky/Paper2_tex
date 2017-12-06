@@ -42,18 +42,30 @@
 \documentclass[12pt]{iopart}
 \newcommand{\gguide}{{\it Preparing graphics for IOP journals}}
 %Uncomment next line if AMS fonts required
-%\usepackage{iopams}  
+\usepackage{iopams}  
+\usepackage[german, english]{babel}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{supertabular}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{rotating}
+\usepackage{graphicx}
+
 \begin{document}
 
 \title[Author guidelines for IOP journals in  \LaTeXe]{How to prepare and submit an article for 
 publication in an IOP journal using \LaTeXe}
 
-\author{Michael Peichl und der verdammte Rest.}
+\author{Michael Peichl, Stephan Thober, and Andreas Marx}
 
-\address{IOP 
-Publishing, Dirac
-House, Temple Back, Bristol BS1 6BE, UK}
-\ead{custserv@iop.org}
+\address{UFZ - Helmholtz Centre for Environmental Research, Leipzig, Germany}
+\ead{michael.peichl@ufz.de}
+
 \begin{abstract}
 This document describes the  preparation of an article using \LaTeXe\ and 
 \verb"iopart.cls" (the IOP \LaTeXe\ preprint class file).
@@ -76,7 +88,6 @@ the appropriate format for the journal concerned.
 %\submitto{\JPA}
 % Comment out if separate title page not required
 \maketitle
-
 \section{Introduction: file preparation and submission}
 The \verb"iopart" \LaTeXe\ article class file is provided to help authors prepare articles for submission to the IOP journals. Submission is not restricted to those using of this class file and articles prepared using any other class or style files can also be submitted. Use of the \verb"iopart" class file does, however, help to speed the publication process and it is hoped it will make it easy for authors to prepare their articles. This document describes and demonstrates the use of \verb"iopart.cls" to produce a preprint for submission and refereeing. The detailed formatting for print and web use will be undertaken by IOP as part of the production process after the article has been accepted for publication, but use of \verb"iopart" does make this simpler.
 

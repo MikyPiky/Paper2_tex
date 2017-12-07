@@ -90,14 +90,26 @@
 
 
 \section{Introduction}
-Should state clearly the object of the work, its scope and the main advances reported, with brief references to relevant
-results by other workers   \citep{Brouwer2012, Schlenker2009}.
+Based on the current research on silage maize sensitivity to monthly weather and soil moisture impacts  a predictive model shall be established.  So far, the goal was to evaluate the causal effects of soil moisture anomalies on a monthly basis. So far, time dependent effects of soil moisture have been evaluated. For instance extreme wetness in the early period and extreme dryness in August are responsible for diminished silage maize yield.  Further, the focus was on in-sample variation. This has methodological implications, as for instance the use of parametric standard errors and the control for confounding factors. Also, it allows to use plm package, which is not so good suited for predictions. 
+Now, we derive heuristacially a model which relies on the seasonal effects observed in the paper before. 
 
 \section{Data}
 \subsection{Training Data}
+
+\label{data:1}
+% Fig 1 
+% include graphics
+\begin{figure}
+	\label{f:1}
+	\centering
+	\includegraphics[width=1\textwidth]{PredictorCorrelation.png}
+	\caption{Pearson Correlation of the possible predictors used in the model.}
+\end{figure}
+
 \subsection{Climate Data}
 \section{Methods}
 \section{Results}
+
 \section{Discussion}
 % \ack
 % \appendix 
@@ -119,15 +131,20 @@ results by other workers   \citep{Brouwer2012, Schlenker2009}.
 
 
 \section{Introduction}
-Should state clearly the object of the work, its scope and the main advances reported, with brief references to relevant
-results by other workers   \citep{Brouwer2012, Schlenker2009}.
+Based on the current research on silage maize sensitivity to monthly weather and soil moisture impacts  a predictive model shall be established.  So far, the goal was to evaluate the causal effects of soil moisture anomalies on a monthly basis. So far, time dependent effects of soil moisture have been evaluated. For instance extreme wetness in the early period and extreme dryness in August are responsible for diminished silage maize yield.  Further, the focus was on in-sample variation. This has methodological implications, as for instance the use of parametric standard errors and the control for confounding factors. Also, it allows to use plm package, which is not so good suited for predictions. 
+Now, we derive heuristacially a model which relies on the seasonal effects observed in the paper before. 
 
-\section{Data}
-\subsection{Training Data}
-\subsection{Climate Data}
+
+
 \section{Methods}
-\section{Results}
-\section{Discussion}
+\subsection{Training Data and Model Fitting}
+% Generell denke ich, dass hier der Methodenteil wesentlich kürzer gehalten werden kann als  in Paper 1. 
+\subsubsection{(Training Data)}
+Test
+\subsection{Climate Data}
+
+\section{Results and Discussion}
+
 % \ack
 % \appendix 
 \newcommand{\newblock}{}

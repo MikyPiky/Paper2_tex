@@ -22,6 +22,10 @@
 % $ dollar              % percent       
 % ( open parenthesis    ) close paren.  
 % - hyphen              = equals sign
+  
+  % 23 
+  
+  % 23 
 % | vertical bar        ~ tilde         
 % @ at sign             _ underscore
 % { open curly brace    } close curly   
@@ -39,19 +43,19 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-
-% Include comments
-%At the start of the LA T EX source code please include commented material to identify the journal, author, and (if you are sending a revised version or a resubmission) the reference number that the journal has given to the submission. 
-
+\pdfminorversion=4
 \documentclass[12pt]{iopart}
 \newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
 %Uncomment next line if AMS fonts required
-%\usepackage{iopams}  
-\usepackage{cite}
-\usepackage[english]{babel}
-
-
-
+\usepackage{iopams}  
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{color}
+% \usepackage{harvard}  
+\usepackage{natbib}
+\usepackage{lineno}
+\linenumbers*[1]
 
 \begin{document}
 	
@@ -63,10 +67,10 @@
 \ead{michael.peichl@ufz.de}
 
 \begin{abstract}
-Here comes the abstract. The abstract should normally be restricted to a single paragraph of around 200 words.
-
-
-
+	Here comes the abstract. The abstract should normally be restricted to a single paragraph of around 200 words.
+	
+	
+	
 \end{abstract}
 
 \noindent{\it Keywords\/}: silage maize, climate change, Germany (3 - 7 words)
@@ -82,11 +86,11 @@ Here comes the abstract. The abstract should normally be restricted to a single 
 \submitto{\ERL}
 % Comment out if separate title page not required
 \maketitle
-	
+
 
 \section{Introduction}
 Should state clearly the object of the work, its scope and the main advances reported, with brief references to relevant
-results by other workers   \cite{Brouwer2012, Schlenker2009}.
+results by other workers   \citep{Brouwer2012, Schlenker2009}.
 
 \section{Data}
 \subsection{Training Data}
@@ -96,11 +100,9 @@ results by other workers   \cite{Brouwer2012, Schlenker2009}.
 \section{Discussion}
 % \ack
 % \appendix 
+\newcommand{\newblock}{}
+\bibliographystyle{dcu} %{dcu} 
+\bibliography{Mendeley.bib}
+%\bibliography{high_flows}
 
-\bibliography{Mendeley}{}
-\bibliographystyle{plainnat}
-	
 \end{document}
-
-
-

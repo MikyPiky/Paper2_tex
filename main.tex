@@ -75,6 +75,8 @@ The most important seasonal effects are then combined here in a reduced panel mo
 To estimate soil  moisture anomalies, climate projections derived from five regional climate models (RCMs) of the ENSEMBLES project under A1B scenario are used to force the mesoscale Hydrological Model (www.ufz.de/mHM). The meteorological data are demeaned to correct for systematic biases of the RCMs. The approach is based solely on anomalies. Silage maize yield variations are predicted for the reference period 1971 – 2000 and projected for the climate periods  2021 - 2050 and 2070 - 2099. For all RCMs, on average crop yield is projected to decrease for both climate periods ranging from -1.2 to -10.5 decitonnes/hectar (dt/ha) for the period 2021 – 2050 and -3.7 to -39.1 dt/ha until the end of the century. The maximum projected yield loss is less than 10 \% of the average yield in Germany for the period 1999 – 2015 (447  dt/ha). Among the different explanatory variables no single driver of crop yield anomalies could be identified. This highlights that multiple seasonal determinants are required for accurate estimation of crop yield variation. 
 
 
+% 
+
 \end{abstract}
 
 \noindent{\it Keywords\/}: silage maize, climate change, Germany (3 - 7 words)
@@ -95,6 +97,14 @@ To estimate soil  moisture anomalies, climate projections derived from five regi
 \section{Introduction}
 Based on the current research on silage maize sensitivity to monthly weather and soil moisture impacts  a predictive model shall be established.  So far, the goal was to evaluate the causal effects of soil moisture anomalies on a monthly basis. So far, time dependent effects of soil moisture have been evaluated. For instance extreme wetness in the early period and extreme dryness in August are responsible for diminished silage maize yield.  Further, the focus was on in-sample variation. This has methodological implications, as for instance the use of parametric standard errors and the control for confounding factors. Also, it allows to use plm package, which is not so good suited for predictions. 
 Now, we derive heuristacially a model which relies on the seasonal effects observed in the paper before. 
+
+Literature:
+IPCC: AR5 (Synthesis Report)
+Distribution of Impacts (Figure SPM.10)
+
+For the major crops (wheat, rice, and maize) in tropical and temperate regions, climate change without adaptation is projected to negatively impact production for local temperature increases of 2°C or more above late-20th- century levels, although individual locations may benefit (medium confidence).
+
+
 
 \section{Data and Methods}
 \subsection{Training Data}
@@ -192,6 +202,11 @@ Now, we derive heuristacially a model which relies on the seasonal effects obser
 	 }
 \end{table} 
 
+\begin{itemize}
+\item Here I should 
+\end{itemize}
+
+
 
 \subsection{Method}
 \subsubsection{Model without fixed effects but demeaned data.}
@@ -219,8 +234,14 @@ In and out of sample goodness of fit.
 	\label{scatter:1f}
 	\centering
 	\includegraphics[width=1\textwidth]{figures/Train_1999-2015.pdf}
-	\caption{Scatterplot of the observed silage Maize Anomaly Data against the predicted data with the standard model considering SMI of June and August and
-		Meteorology of July using observed data. The time period is 1999 to 2015.}
+	\caption{Scatterplot of the observed silage Maize Anomaly Data against the predicted data. The time period is 1999 to 2015.}
+\end{figure}
+
+\begin{figure}
+	\label{scatter:2f}
+	\centering
+	\includegraphics[width=1\textwidth]{figures/Train_1999-2015_norm.pdf}
+	\caption{Scatterplot of the observed silage Maize Anomaly Data against the predicted data (both divided by the observed mean yield of each administrative district). The time period is 1999 to 2015.}
 \end{figure}
 
 
@@ -300,7 +321,7 @@ In and out of sample goodness of fit.
 	\caption{Violin Plot of the predicted yield for the periods 2021 - 2050 and 2070 - 2099 compared against the reference period 1971 - 2000. The first panel shows the cumulated results for all RCMs, the other five for each RCM separately.}
 \end{figure}
 
-\subsubsection{Yield Maps with Wilcoxon Rank Tests}
+\subsubsection{Maps of Results}
 \begin{figure}
 	\label{map:1f}
 	\centering
@@ -308,12 +329,6 @@ In and out of sample goodness of fit.
 	\caption{}
 \end{figure}
 
-\begin{figure}
-	\label{map:2f}
-	\centering
-	\includegraphics[width=1\textwidth]{figures/Wilcoxon_AllRCMs.png}
-	\caption{}
-\end{figure}
 
 
 \subsubsection{Maps of Structural Patterns of Yield and Explanatory Variables.}
@@ -333,6 +348,16 @@ In and out of sample goodness of fit.
 \section{Discussion}
 % \ack
 % \appendix 
+
+% Wilcoxon 
+\begin{figure}
+	\label{map:2f}
+	\centering
+	\includegraphics[width=1\textwidth]{figures/Wilcoxon_AllRCMs.png}
+	\caption{}
+\end{figure}
+
+
 \newcommand{\newblock}{}
 \bibliographystyle{dcu} %{dcu} 
 \bibliography{Mendeley.bib}
@@ -340,38 +365,5 @@ In and out of sample goodness of fit.
 
 \end{document}
 
-%\pacs{00.00, 20.00, 42.10}
-% Keywords required only for MST, PB, PMB, PM, JOA, JOB? 
-%\vspace{2pc}
-%\noindent{\it Keywords}: Article preparation, IOP journals
-% Uncomment for Submitted to journal title message
-\submitto{\ERL}
-% Comment out if separate title page not required
-\maketitle
 
 
-\section{Introduction}
-Based on the current research on silage maize sensitivity to monthly weather and soil moisture impacts  a predictive model shall be established.  So far, the goal was to evaluate the causal effects of soil moisture anomalies on a monthly basis. So far, time dependent effects of soil moisture have been evaluated. For instance extreme wetness in the early period and extreme dryness in August are responsible for diminished silage maize yield.  Further, the focus was on in-sample variation. This has methodological implications, as for instance the use of parametric standard errors and the control for confounding factors. Also, it allows to use plm package, which is not so good suited for predictions. 
-Now, we derive heuristacially a model which relies on the seasonal effects observed in the paper before. 
-
-
-
-\section{Methods}
-\subsection{Training Data and Model Fitting}
-% Generell denke ich, dass hier der Methodenteil wesentlich kürzer gehalten werden kann als  in Paper 1. 
-\subsubsection{(Training Data)}
-Test
-\subsection{Climate Data}
-
-
-
-\section{Results and Discussion}
-
-% \ack
-% \appendix 
-\newcommand{\newblock}{}
-\bibliographystyle{dcu} %{dcu} 
-\bibliography{Mendeley.bib}
-%\bibliography{high_flows}
-
-\end{document}
